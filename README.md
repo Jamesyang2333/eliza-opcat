@@ -64,6 +64,36 @@ All contributions are publicly tracked on-chain and used exclusively for ecosyst
 
 > **Note for Windows Users:** [WSL 2](https://learn.microsoft.com/en-us/windows/wsl/install-manual) is required.
 
+### Instruction to start opcat agent
+
+Checkout opcat-agent branch
+```
+git checkout opcat-agent
+```
+
+Install and Build Eliza
+
+```bash
+pnpm i
+pnpm build
+```
+
+Copy .env.example to .env and fill in the OPENAI_API_KEY
+
+```
+cp .env.example .env
+```
+
+Start the opcat agent 
+```
+pnpm start --characters="./characters/cateus.character.json"
+```
+
+Start the web interface (set the SERVER_PORT to the port of the agent)
+```
+SERVER_PORT=xxxx pnpm start:client
+```
+
 ### Use the Starter (Recommended)
 
 ```bash
