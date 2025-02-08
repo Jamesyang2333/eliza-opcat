@@ -45,6 +45,36 @@
 
 ## 🚀 Quick Start
 
+### Instruction to use cat protocol plugin
+
+Checkout plugin-cat branch
+```
+git checkout plugin-cat
+```
+
+Install and Build Eliza
+
+```bash
+pnpm i
+pnpm build
+```
+
+Copy .env.example to .env and fill in the OPENAI_API_KEY
+
+```
+cp .env.example .env
+```
+
+Start the opcat agent 
+```
+pnpm start --characters="./characters/cateus.character.json"
+```
+
+Start the web interface (set the SERVER_PORT to the port of the agent)
+```
+SERVER_PORT=xxxx pnpm start:client
+```
+
 ### Prerequisites
 
 - [Python 2.7+](https://www.python.org/downloads/)
