@@ -56,6 +56,7 @@ import {
     tradePlugin,
     webhookPlugin,
 } from "@elizaos/plugin-coinbase";
+import { catPlugin } from "@elizaos/plugin-cat";
 import { coinmarketcapPlugin } from "@elizaos/plugin-coinmarketcap";
 import { coingeckoPlugin } from "@elizaos/plugin-coingecko";
 import { confluxPlugin } from "@elizaos/plugin-conflux";
@@ -708,6 +709,7 @@ export async function createAgent(
         character,
         // character.plugins are handled when clients are added
         plugins: [
+            catPlugin,
             bootstrapPlugin,
             getSecret(character, "CONFLUX_CORE_PRIVATE_KEY")
                 ? confluxPlugin
