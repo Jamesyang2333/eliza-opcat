@@ -11,9 +11,9 @@ import {
 } from "@elizaos/core";
 import { validateCatConfig } from "../../environment";
 import { priceExamples } from "./examples";
-import { createPriceService } from "./service";
+import { createPriceService } from "../../services/price";
 import { getPriceTemplate } from "./template";
-import { GetPriceContent } from "./types";
+import { GetPriceContent } from "../../types/content";
 import { isGetPriceContent } from "./validation";
 
 export default {
@@ -80,8 +80,7 @@ export default {
                     callback({
                         text: `The current price of token ${content.tokenId} is ${priceData.price} FB per token`,
                         content: {
-                            symbol: content.tokenId,
-                            currency: content.address,
+                            tokenId: content.tokenId,
                             ...priceData,
                         },
                     });

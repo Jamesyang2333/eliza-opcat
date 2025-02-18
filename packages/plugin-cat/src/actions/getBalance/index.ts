@@ -11,9 +11,9 @@ import {
 } from "@elizaos/core";
 import { validateCatConfig } from "../../environment";
 import { balanceExamples } from "./examples";
-import { createBalanceService } from "./service";
+import { createBalanceService } from "../../services/catToken";
 import { getBalanceTemplate } from "./template";
-import { GetBalanceContent } from "./types";
+import { GetBalanceContent } from "../../types/content";
 import { isGetBalanceContent } from "./validation";
 
 export default {
@@ -83,8 +83,8 @@ export default {
                     callback({
                         text: `The current balance of address ${content.address} for token ${content.tokenId} is ${balanceData.balance}`,
                         content: {
-                            symbol: content.tokenId,
-                            currency: content.address,
+                            tokenId: content.tokenId,
+                            address: content.address,
                             ...balanceData,
                         },
                     });

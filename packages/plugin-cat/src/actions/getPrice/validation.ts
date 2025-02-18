@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { GetPriceContent } from "./types";
+import { GetPriceContent } from "../../types/content";
 
 export const GetPriceSchema = z.object({
     tokenId: z

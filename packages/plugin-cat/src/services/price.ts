@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ApiResponse, PriceData } from "./types";
+import { PriceApiResponse, PriceData } from "../types/price";
 
 const BASE_URL = "https://open-api-fractal.unisat.io/v1";
 
@@ -14,7 +14,7 @@ export const createPriceService = () => {
     const getPrice = async (tokenId: string): Promise<PriceData> => {
         try {
             console.log(tokenId);
-            const response = await client.get<ApiResponse>(
+            const response = await client.get<PriceApiResponse>(
                 `/cat20-dex/getTokenPrice`,
                 {
                     params: {

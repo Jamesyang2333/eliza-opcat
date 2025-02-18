@@ -1,14 +1,10 @@
 import { Content } from "@elizaos/core";
 
-export interface GetPriceContent extends Content {
-    tokenId: string;
-}
-
 export interface PriceData {
     price: number;
 }
 
-export interface ApiResponse {
+export interface PriceApiResponse {
     data: {
         askPrice: number;
         bidPrice: number;

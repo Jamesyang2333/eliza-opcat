@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { GetBalanceContent } from "./types";
+import { GetBalanceContent } from "../../types/content";
 
 export const GetBalanceSchema = z.object({
     tokenId: z
